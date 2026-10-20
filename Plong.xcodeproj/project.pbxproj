@@ -6,8 +6,19 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		58FFE7613087C98300660DA9 /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 58FFE75F3087C98300660DA9 /* Shared.xcconfig */; };
+		58FFE7623087C98300660DA9 /* Local.xcconfig.example in Resources */ = {isa = PBXBuildFile; fileRef = 58FFE75D3087C98300660DA9 /* Local.xcconfig.example */; };
+		58FFE7633087C98300660DA9 /* macOS.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 58FFE75E3087C98300660DA9 /* macOS.xcconfig */; };
+		58FFE7643087C98300660DA9 /* Local.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 58FFE75C3087C98300660DA9 /* Local.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		58445C4C3087B68B000D22E9 /* Plong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FFE75C3087C98300660DA9 /* Local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Local.xcconfig; sourceTree = "<group>"; };
+		58FFE75D3087C98300660DA9 /* Local.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Local.xcconfig.example; sourceTree = "<group>"; };
+		58FFE75E3087C98300660DA9 /* macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS.xcconfig; sourceTree = "<group>"; };
+		58FFE75F3087C98300660DA9 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +41,7 @@
 		58445C433087B68B000D22E9 = {
 			isa = PBXGroup;
 			children = (
+				58FFE7603087C98300660DA9 /* Config */,
 				58445C4E3087B68B000D22E9 /* Plong */,
 				58445C4D3087B68B000D22E9 /* Products */,
 			);
@@ -43,6 +55,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		58FFE7603087C98300660DA9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				58FFE75C3087C98300660DA9 /* Local.xcconfig */,
+				58FFE75D3087C98300660DA9 /* Local.xcconfig.example */,
+				58FFE75E3087C98300660DA9 /* macOS.xcconfig */,
+				58FFE75F3087C98300660DA9 /* Shared.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -53,6 +76,7 @@
 				58445C483087B68B000D22E9 /* Sources */,
 				58445C493087B68B000D22E9 /* Frameworks */,
 				58445C4A3087B68B000D22E9 /* Resources */,
+				58FFE76B3087CE4B00660DA9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -102,9 +126,24 @@
 		58445C4A3087B68B000D22E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				58FFE7613087C98300660DA9 /* Shared.xcconfig in Resources */,
+				58FFE7623087C98300660DA9 /* Local.xcconfig.example in Resources */,
+				58FFE7633087C98300660DA9 /* macOS.xcconfig in Resources */,
+				58FFE7643087C98300660DA9 /* Local.xcconfig in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58FFE76B3087CE4B00660DA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = (
+				"",
+			);
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58445C483087B68B000D22E9 /* Sources */ = {
@@ -117,6 +156,7 @@
 /* Begin XCBuildConfiguration section */
 		58445C553087B68C000D22E9 /* Debug configuration for PBXProject "Plong" */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FFE75F3087C98300660DA9 /* Shared.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -152,7 +192,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -168,7 +208,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -180,6 +219,7 @@
 		};
 		58445C563087B68C000D22E9 /* Release configuration for PBXProject "Plong" */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FFE75F3087C98300660DA9 /* Shared.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -215,7 +255,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -225,7 +265,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -235,6 +274,7 @@
 		};
 		58445C583087B68C000D22E9 /* Debug configuration for PBXNativeTarget "Plong" */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FFE75E3087C98300660DA9 /* macOS.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -251,7 +291,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elven.Plong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -265,6 +304,7 @@
 		};
 		58445C593087B68C000D22E9 /* Release configuration for PBXNativeTarget "Plong" */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FFE75E3087C98300660DA9 /* macOS.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -281,7 +321,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elven.Plong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
